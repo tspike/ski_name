@@ -8,7 +8,15 @@
 </head>
 <body>
 <div class='container'>
-  <%= yield %>
+  <div class='offset4 span6'>
+    <%= yield %>
+    <div class='row'>
+      <%= link_to image_tag('github-icon.png', :alt => 'Github'), 'https://github.com/tspike/ski_name' %>
+    </div>
+    <div class='row'>
+      This project is open source.
+    </div>
+  </div>
 </div>
 </body>
 </html>

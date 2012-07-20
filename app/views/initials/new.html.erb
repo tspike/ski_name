@@ -1,16 +1,10 @@
-<div class="row">
-  <div class="offset4 span6">
-    <h1>What's your skier name?</h1>
+  <div class="row">
+    <h1>What's your ski bum name?</h1>
   </div>
-</div>
-<div class="row">
-  <div class="offset4 span6">
+  <br/>
+  <div class="row">
     <%= semantic_form_for @initials, :remote => true, :label => false, :validate => true, :html => { :class => 'well form-inline' } do |f| %>
-    <%= f.input :initials, :hint => "Enter your initials", :label => false, :input_html => { :placeholder => 'POW', :class => 'input-small', :maxlength => '3' } %>
+      <%= f.input :initials, :hint => "Enter your initials", :label => false, :input_html => { :placeholder => 'POW', :class => 'input-small', :maxlength => '3' } %>
     <% end -%>
   </div>
-</div>
-<div class="row">
-  <div class="offset4 span6" id="result">
-  </div>
-</div>
+  <div class="row" id="result"></div>
