@@ -16,7 +16,6 @@ group :development, :test do
   gem "growl"
   gem 'factory_girl_rails'
   gem 'capybara'
-  gem 'capybara-webkit'
   gem 'launchy'
   gem 'database_cleaner'
 end
@@ -38,7 +37,7 @@ end
 
 gem 'jquery-rails'
 
-#gem 'formtastic', " ~> 2.1.1"
+gem 'formtastic', " ~> 2.1.1"
 gem 'formtastic-bootstrap'
 gem 'active_attr'
 gem 'client_side_validations'
