@@ -9,6 +9,8 @@ class InitialsController < ApplicationController
 
   def create
     @initials = Initial.new(params[:initial])
-    @skier_name = @initials.to_skier_name
+    unless @initials.valid?
+      render new_initial_path
+    end
   end
 end

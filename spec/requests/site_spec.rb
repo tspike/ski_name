@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Sites" do
+describe "Site" do
   before(:each) do
     visit root_path
   end
@@ -12,6 +12,11 @@ describe "Sites" do
   it "should return the right names" do
     fill_in 'Initials', :with => 'TAS'
     click_button 'Create Initial'
-    page.should have_content 'Big Bones Davis'
+    page.should have_content 'Iffy Stash McFaceplant'
+
+    visit root_path
+    fill_in 'Initials', :with => 'EWW'
+    click_button 'Create Initial'
+    page.should have_content 'Craggy Poser Camberson'
   end
 end

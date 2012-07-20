@@ -19,15 +19,13 @@ class Initial
   include ActiveAttr::Model
 
   attribute :initials
-  attribute :skier_name
 
-  validates :initials, :presence => true
+  validates :initials, :presence => true, :length => { :is => 3 }
 
-  def to_skier_name
-    first = Name.find_by_initial self.initials[0]
-    middle = Name.find_by_initial self.initials[1]
-    last = Name.find_by_initial self.initials[2]
-
+  def skier_name
+    first = Name.where(:position => 'first', :initial => self.initials[0]).first
+    middle = Name.where(:position => 'middle', :initial => self.initials[1]).first
+    last = Name.where(:position => 'last', :initial => self.initials[2]).first
     "#{first} #{middle} #{last}"
   end
 end
