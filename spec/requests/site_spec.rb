@@ -27,7 +27,7 @@ describe "Site" do
 
   it "handles lowercase", :js => true do
     fill_in 'initial_initials', :with => 'sfx'
-    wait_until { binding.pry; page.find('#result').text.split(/ /).length == 3 }
+    wait_until { page.find('#result').text.split(/ /).length == 3 }
     page.should have_content 'Dank Glade Rockerson'
   end
 
