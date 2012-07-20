@@ -20,12 +20,10 @@ class Initial
 
   attribute :initials
 
-  validates :initials, :presence => true, :length => { :is => 3 }
-
   def skier_name
-    first = Name.where(:position => 'first', :initial => self.initials[0]).first
-    middle = Name.where(:position => 'middle', :initial => self.initials[1]).first
-    last = Name.where(:position => 'last', :initial => self.initials[2]).first
+    first = Name.where(:position => 'first', :initial => self.initials[0].upcase).first if initials[0]
+    middle = Name.where(:position => 'middle', :initial => self.initials[1].upcase).first if initials[1]
+    last = Name.where(:position => 'last', :initial => self.initials[2].upcase).first if initials[2]
     "#{first} #{middle} #{last}"
   end
 end

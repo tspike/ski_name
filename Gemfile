@@ -37,9 +37,10 @@ end
 
 gem 'jquery-rails'
 
-gem 'formtastic', " ~> 2.1.1"
+#gem 'formtastic', " ~> 2.1.1"
 gem 'formtastic-bootstrap'
 gem 'active_attr'
+gem 'client_side_validations'
 
 
 # To use ActiveModel has_secure_password

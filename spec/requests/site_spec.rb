@@ -18,5 +18,10 @@ describe "Site" do
     fill_in 'Initials', :with => 'EWW'
     click_button 'Create Initial'
     page.should have_content 'Craggy Poser Camberson'
+
+    visit root_path
+    fill_in 'Initials', :with => 'sfx'
+    click_button 'Create Initial'
+    page.should have_content 'Dank Glade Rockerson'
   end
 end
