@@ -8,6 +8,7 @@ gem 'rails', '3.2.6'
 gem 'sqlite3'
 
 group :development, :test do
+  gem 'pry'
   gem 'rb-fsevent'
   gem 'guard-rspec'
   gem 'rspec-rails'
@@ -38,6 +39,7 @@ gem 'jquery-rails'
 
 gem 'formtastic', " ~> 2.1.1"
 gem 'formtastic-bootstrap'
+gem 'active_attr'
 
 
 # To use ActiveModel has_secure_password
