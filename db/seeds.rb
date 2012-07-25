@@ -91,6 +91,8 @@ NAMES = [
 NAMES.each do |name|
   n = Name.new(name)
   unless n.save
-    raise 'Error! #{n.errors}'
+    n.errors.each do |error|
+      puts "Error! #{error}"
+    end
   end
 end
