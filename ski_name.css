@@ -1,0 +1,12 @@
+/*body {*/
+  /*-webkit-background-size: contain;*/
+  /*-moz-background-size: contain;*/
+  /*-o-background-size: contain;*/
+  /*background-size: contain;*/
+  /*background: url(flatirons.jpg) no-repeat 50% 0 fixed;*/
+  /*background-position: center;*/
+/*}*/
+
+.container {
+  padding-top: 150px;
+}

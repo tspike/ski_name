@@ -105,4 +105,6 @@ $(function() {
       $('.name-container').addClass('hidden');
     }
   });
+
+  $.backstretch('flatirons.jpg');
 });
