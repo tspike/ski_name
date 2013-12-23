@@ -101,12 +101,11 @@ $(function() {
   $initials.on('keyup', function() {
     if ($initials.val().length > 0 && $initials.val().length < 4) {
       $('.name-container').removeClass('hidden');
-      $('.name-container').fadeIn();
-      $('.header-container').fadeOut();
+      $('.header-container').addClass('hidden');
       $('#the-name').text(get_name_for($initials.val()));
     } else {
-      $('.name-container').fadeOut();
-      $('.header-container').fadeIn();
+      $('.name-container').addClass('hidden');
+      $('.header-container').removeClass('hidden');
     }
   });
 
