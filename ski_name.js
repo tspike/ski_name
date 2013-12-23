@@ -117,8 +117,7 @@ $(function() {
     }
   };
 
-  $('body').on('keyup', '#initials', update_ski_name);
-  //$('body').on('change', '#initials', update_ski_name);
+  setInterval(update_ski_name, 100);
 
   $.backstretch('flatirons.jpg');
 });
