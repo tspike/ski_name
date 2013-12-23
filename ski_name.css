@@ -9,6 +9,10 @@
   color: white;
 }
 
+.name-container {
+  display: none;
+}
+
 @media(max-width: 992px) {
   .container {
     padding-top: 10px;

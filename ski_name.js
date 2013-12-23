@@ -100,17 +100,25 @@ $(function() {
 
   var update_ski_name = function() {
     if ($initials.val().length > 0 && $initials.val().length < 4) {
-      $('.name-container').removeClass('hidden');
-      $('.header-container').addClass('hidden');
+      $('.name-container').css({
+        display: "block"
+      });
+      $('.header-container').css({
+        display: "none"
+      });
       $('#the-name').text(get_name_for($initials.val()));
     } else {
-      $('.name-container').addClass('hidden');
-      $('.header-container').removeClass('hidden');
+      $('.name-container').css({
+        display: "none"
+      });
+      $('.header-container').css({
+        display: "block"
+      });
     }
   };
 
   $('body').on('keyup', '#initials', update_ski_name);
-  $('body').on('change', '#initials', update_ski_name);
+  //$('body').on('change', '#initials', update_ski_name);
 
   $.backstretch('flatirons.jpg');
 });
