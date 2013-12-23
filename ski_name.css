@@ -8,3 +8,9 @@
   bottom: 10px;
   color: white;
 }
+
+@media(max-width: 992px) {
+  .container {
+    padding-top: 10px;
+  }
+}
