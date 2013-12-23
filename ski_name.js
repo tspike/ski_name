@@ -109,10 +109,8 @@ $(function() {
     }
   };
 
-  $(function() {
-    $(document).on('keyup', '#initials', update_ski_name);
-    $(document).on('change', '#initials', update_ski_name);
+  $('body').on('keyup', '#initials', update_ski_name);
+  $('body').on('change', '#initials', update_ski_name);
 
-    $.backstretch('flatirons.jpg');
-  });
+  $.backstretch('flatirons.jpg');
 });
