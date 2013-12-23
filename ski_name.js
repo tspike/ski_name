@@ -98,7 +98,7 @@ $(function() {
     return full_name.slice(0, full_name.length-1);
   };
 
-  $initials.on('keyup', function() {
+  $(document).on('keyup', '#initials', function() {
     if ($initials.val().length > 0 && $initials.val().length < 4) {
       $('.name-container').removeClass('hidden');
       $('.header-container').addClass('hidden');
