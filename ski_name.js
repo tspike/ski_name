@@ -100,24 +100,17 @@ $(function() {
 
   var update_ski_name = function() {
     if ($initials.val().length > 0 && $initials.val().length < 4) {
-      $('.name-container').css({
-        display: "block"
-      });
-      $('.header-container').css({
-        display: "none"
-      });
+      $('.name-container').show();
+      $('.header-container').hide();
       $('#the-name').text(get_name_for($initials.val()));
     } else {
-      $('.name-container').css({
-        display: "none"
-      });
-      $('.header-container').css({
-        display: "block"
-      });
+      $('.name-container').hide();
+      $('.header-container').show();
     }
   };
 
+  // use interval instead of keyup to fix android issues
   setInterval(update_ski_name, 100);
 
-  $.backstretch('flatirons.jpg');
+  $.backstretch('http://www.tspike.com/pictures/flatirons.jpg');
 });

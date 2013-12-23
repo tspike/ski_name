@@ -7,10 +7,15 @@
   right: 10px;
   bottom: 10px;
   color: white;
+  text-align: right;
+}
+
+.footer-text a {
+  margin-right: 10px;
 }
 
 .name-container {
-  /*display: none;*/
+  display: none;
 }
 
 @media(max-width: 992px) {
