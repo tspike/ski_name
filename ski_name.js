@@ -98,7 +98,7 @@ $(function() {
     return full_name.slice(0, full_name.length-1);
   };
 
-  $(document).on('keyup', '#initials', function() {
+  var update_ski_name = function() {
     if ($initials.val().length > 0 && $initials.val().length < 4) {
       $('.name-container').removeClass('hidden');
       $('.header-container').addClass('hidden');
@@ -107,7 +107,10 @@ $(function() {
       $('.name-container').addClass('hidden');
       $('.header-container').removeClass('hidden');
     }
-  });
+  };
+
+  $(document).on('keyup', '#initials', update_ski_name);
+  $(document).on('change', '#initials', update_ski_name);
 
   $.backstretch('flatirons.jpg');
 });
